@@ -21,8 +21,13 @@
             "email": "imaliy.filsh@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "yiisoft/widget": "^3.0@dev",
+        "yiisoft/html": "^3.0@dev",
+        "yiisoft/arrays": "^3.0@dev"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",

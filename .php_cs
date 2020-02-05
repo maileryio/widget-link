@@ -5,7 +5,7 @@ Yii Widget Link
 @link      https://github.com/maileryio/yii-widget-link
 @package   yii-widget-link
 @license   BSD-3-Clause
-@copyright Copyright (c) 2020, AML Soft
+@copyright Copyright (c) 2020, Mailery (https://mailery.io/)
 EOF;
 
 return PhpCsFixer\Config::create()
