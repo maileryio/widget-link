@@ -27,7 +27,7 @@
         "php": "^7.4",
         "yiisoft/widget": "^3.0@dev",
         "yiisoft/html": "^3.0@dev",
-        "yiisoft/arrays": "^3.0@dev"
+        "npm-asset/maileryio--vue-widget-link": "^1.0"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
@@ -38,5 +38,11 @@
         "psr-4": {
             "Mailery\\Widget\\": "src"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

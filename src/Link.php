@@ -2,7 +2,6 @@
 
 namespace Mailery\Widget;
 
-use Yiisoft\Arrays\ArrayHelper;
 use Yiisoft\Html\Html;
 use Yiisoft\Widget\Widget;
 
@@ -22,17 +21,17 @@ class Link extends Widget
     /**
      * @var string
      */
-    private string $method;
+    private string $method = 'get';
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $confirm;
+    private ?string $confirm = null;
 
     /**
      * @var array
      */
-    private array $options;
+    private array $options = [];
 
     /**
      * @param string $label
@@ -89,9 +88,16 @@ class Link extends Widget
      */
     protected function run(): string
     {
-        $options = $this->options;
-        $tag = ArrayHelper::remove($options, 'tag', 'a');
-        return Html::tag($tag, $this->label, $options);
+        $options = array_filter(array_merge(
+            $this->options,
+            [
+                'href' => $this->href,
+                'method' => $this->method,
+                'confirm' => $this->confirm
+            ]
+        ));
+
+        return Html::tag('ui-widget-link', $this->label, $options);
     }
 
 }
