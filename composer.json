@@ -1,0 +1,37 @@
+{
+    "name": "maileryio/yii-widget-link",
+    "type": "library",
+    "description": "Yii Widget Link",
+    "keywords": [
+        "yii",
+        "widget"
+    ],
+    "homepage": "https://github.com/maileryio/yii-widget-link",
+    "license": "BSD-3-Clause",
+    "support": {
+        "email": "imaliy.filsh@gmail.com",
+        "source": "https://github.com/maileryio/yii-widget-link",
+        "issues": "https://github.com/maileryio/yii-widget-link/issues",
+        "wiki": "https://github.com/maileryio/yii-widget-link/wiki"
+    },
+    "authors": [
+        {
+            "name": "Igor Maliy",
+            "role": "Project lead",
+            "email": "imaliy.filsh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "hiqdev/hidev-php": "<2.0 || dev-master",
+        "hiqdev/composer-config-plugin": "^0.3",
+        "maileryio/hidev-mailery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mailery\\Widget\\": "src"
+        }
+    }
+}
