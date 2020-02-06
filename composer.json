@@ -27,7 +27,7 @@
         "php": "^7.4",
         "yiisoft/widget": "^3.0@dev",
         "yiisoft/html": "^3.0@dev",
-        "eloquent/composer-npm-bridge": "^4.1"
+        "foxy/foxy": "^1.0"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
