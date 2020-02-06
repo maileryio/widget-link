@@ -18,6 +18,11 @@
 Thumbs.db
 nbproject
 
+#npm internals
+.config
+.npm
+/node_modules
+
 # composer internals
 /composer.lock
 /vendor

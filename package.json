@@ -1,0 +1,11 @@
+{
+    "name": "yii-widget-link",
+    "version": "1.0.0",
+    "description": "Yii Widget Link",
+    "author": "Igor Maliy <imaliy.filsh@gmail.com>",
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "@maileryio/vue-widget-link": "1.0.*"
+    },
+    "private": true
+}
