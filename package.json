@@ -1,5 +1,4 @@
 {
-    "name": "yii-widget-link",
     "dependencies": {
         "@maileryio/vue-widget-link": "1.0.*"
     },
