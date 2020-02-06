@@ -25,9 +25,9 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.4",
-        "yiisoft/widget": "^3.0@dev",
+        "foxy/foxy": "^1.0",
         "yiisoft/html": "^3.0@dev",
-        "foxy/foxy": "^1.0"
+        "yiisoft/widget": "^3.0@dev"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
@@ -38,5 +38,8 @@
         "psr-4": {
             "Mailery\\Widget\\": "src"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
