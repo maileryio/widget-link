@@ -20,8 +20,6 @@
             "email": "imaliy.filsh@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": "^7.4",
         "foxy/foxy": "^1.0",
