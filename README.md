@@ -2,11 +2,11 @@
 
 **Yii Widget Link**
 
-[![Latest Stable Version](https://poser.pugx.org/maileryio/yii-widget-link/v/stable)](https://packagist.org/packages/maileryio/yii-widget-link)
-[![Total Downloads](https://poser.pugx.org/maileryio/yii-widget-link/downloads)](https://packagist.org/packages/maileryio/yii-widget-link)
-[![Build Status](https://img.shields.io/travis/maileryio/yii-widget-link.svg)](https://travis-ci.org/maileryio/yii-widget-link)
-[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
+[![Latest Stable Version](https://poser.pugx.org/maileryio/_____/v/stable)](https://packagist.org/packages/maileryio/_____)
+[![Total Downloads](https://poser.pugx.org/maileryio/_____/downloads)](https://packagist.org/packages/maileryio/_____)
+[![Build Status](https://travis-ci.com/maileryio/_____.svg?branch=master)](https://travis-ci.com/maileryio/_____)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/maileryio/_____/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/maileryio/_____/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/maileryio/_____/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/maileryio/_____/?branch=master)
 
 Yii Widget Link
 
@@ -33,4 +33,4 @@ to the require section of your composer.json.
 This project is released under the terms of the BSD-3-Clause [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
 
-Copyright © 2020, Mailery (https://mailery.io/)
+Copyright © 2020, Mailery (https://mailery.io)

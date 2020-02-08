@@ -9,17 +9,12 @@
     "homepage": "https://github.com/maileryio/yii-widget-link",
     "license": "BSD-3-Clause",
     "support": {
-        "email": "imaliy.filsh@gmail.com",
         "source": "https://github.com/maileryio/yii-widget-link",
         "issues": "https://github.com/maileryio/yii-widget-link/issues",
         "wiki": "https://github.com/maileryio/yii-widget-link/wiki"
     },
-    "authors": [
-        {
-            "name": "Igor Maliy",
-            "email": "imaliy.filsh@gmail.com"
-        }
-    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^7.4",
         "foxy/foxy": "^1.0",
@@ -27,14 +22,21 @@
         "yiisoft/widget": "^3.0@dev"
     },
     "require-dev": {
-        "hiqdev/hidev-php": "<2.0 || dev-master",
-        "hiqdev/composer-config-plugin": "^0.3",
-        "maileryio/hidev-mailery": "dev-master"
+        "phpunit/phpunit": "^9.0",
+        "phan/phan": "^2.4"
     },
     "autoload": {
         "psr-4": {
             "Mailery\\Widget\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mailery\\Widget\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "phan": "phan --progress-bar -o analysis.txt"
     },
     "config": {
         "sort-packages": true

@@ -1,8 +1,0 @@
-package:
-    type:           library
-    name:           yii-widget-link
-    title:          Yii Widget Link
-    headline:       Yii Widget Link
-    keywords:       yii, widget
-    namespace:      mailery\widget
-    description:    Yii Widget Link
