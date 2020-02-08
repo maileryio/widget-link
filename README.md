@@ -2,11 +2,11 @@
 
 **Yii Widget Link**
 
-[![Latest Stable Version](https://poser.pugx.org/maileryio/_____/v/stable)](https://packagist.org/packages/maileryio/_____)
-[![Total Downloads](https://poser.pugx.org/maileryio/_____/downloads)](https://packagist.org/packages/maileryio/_____)
-[![Build Status](https://travis-ci.com/maileryio/_____.svg?branch=master)](https://travis-ci.com/maileryio/_____)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/maileryio/_____/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/maileryio/_____/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/maileryio/_____/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/maileryio/_____/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/maileryio/yii-widget-link/v/stable)](https://packagist.org/packages/maileryio/yii-widget-link)
+[![Total Downloads](https://poser.pugx.org/maileryio/yii-widget-link/downloads)](https://packagist.org/packages/maileryio/yii-widget-link)
+[![Build Status](https://travis-ci.com/maileryio/yii-widget-link.svg?branch=master)](https://travis-ci.com/maileryio/yii-widget-link)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/?branch=master)
 
 Yii Widget Link
 
