@@ -5,8 +5,8 @@
 [![Latest Stable Version](https://poser.pugx.org/maileryio/yii-widget-link/v/stable)](https://packagist.org/packages/maileryio/yii-widget-link)
 [![Total Downloads](https://poser.pugx.org/maileryio/yii-widget-link/downloads)](https://packagist.org/packages/maileryio/yii-widget-link)
 [![Build Status](https://travis-ci.com/maileryio/yii-widget-link.svg?branch=master)](https://travis-ci.com/maileryio/yii-widget-link)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
+[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
 
 Yii Widget Link
 
