@@ -1,6 +1,16 @@
 <?php
 
-namespace Mailery\Widget;
+declare(strict_types=1);
+
+/**
+ * Yii Widget Link
+ * @link      https://github.com/maileryio/yii-widget-link
+ * @package   yii-widget-link
+ * @license   BSD-3-Clause
+ * @copyright Copyright (c) 2020, Mailery (https://mailery.io/)
+ */
+
+namespace Mailery\Widget\Link;
 
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Html\Html;
@@ -8,7 +18,6 @@ use Yiisoft\Widget\Widget;
 
 class Link extends Widget
 {
-
     /**
      * @var string
      */
@@ -54,6 +63,7 @@ class Link extends Widget
     public function label(string $label): self
     {
         $this->label = $label;
+
         return $this;
     }
 
@@ -64,6 +74,7 @@ class Link extends Widget
     public function href(string $href): self
     {
         $this->href = $href;
+
         return $this;
     }
 
@@ -74,6 +85,7 @@ class Link extends Widget
     public function method(string $method): self
     {
         $this->method = $method;
+
         return $this;
     }
 
@@ -84,6 +96,7 @@ class Link extends Widget
     public function confirm(string $confirm): self
     {
         $this->confirm = $confirm;
+
         return $this;
     }
 
@@ -94,24 +107,28 @@ class Link extends Widget
     public function options(array $options): self
     {
         $this->options = $options;
+
         return $this;
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function run(): string
     {
+        $this->assetManager->register([
+            VueAssetBundle::class,
+        ]);
+
         $options = array_filter(array_merge(
             $this->options,
             [
                 'href' => $this->href,
                 'method' => $this->method,
-                'confirm' => $this->confirm
+                'confirm' => $this->confirm,
             ]
         ));
 
-        return Html::tag('ui-widget-link', $this->label, $options);
+        return Html::tag('vue-widget-link', $this->label, $options);
     }
-
 }
