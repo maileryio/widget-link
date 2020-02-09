@@ -2,6 +2,7 @@
 
 namespace Mailery\Widget;
 
+use Yiisoft\Assets\AssetManager;
 use Yiisoft\Html\Html;
 use Yiisoft\Widget\Widget;
 
@@ -32,6 +33,19 @@ class Link extends Widget
      * @var array
      */
     private array $options = [];
+
+    /**
+     * @var AssetManager
+     */
+    private AssetManager $assetManager;
+
+    /**
+     * @param AssetManager $assetManager
+     */
+    public function __construct(AssetManager $assetManager)
+    {
+        $this->assetManager = $assetManager;
+    }
 
     /**
      * @param string $label
