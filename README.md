@@ -1,14 +1,14 @@
-# Yii Widget Link
+# Link Widget for Mailery Platform
 
-**Yii Widget Link**
+**Link Widget for Mailery Platform**
 
-[![Latest Stable Version](https://poser.pugx.org/maileryio/yii-widget-link/v/stable)](https://packagist.org/packages/maileryio/yii-widget-link)
-[![Total Downloads](https://poser.pugx.org/maileryio/yii-widget-link/downloads)](https://packagist.org/packages/maileryio/yii-widget-link)
-[![Build Status](https://travis-ci.com/maileryio/yii-widget-link.svg?branch=master)](https://travis-ci.com/maileryio/yii-widget-link)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
-[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/yii-widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/yii-widget-link/)
+[![Latest Stable Version](https://poser.pugx.org/maileryio/widget-link/v/stable)](https://packagist.org/packages/maileryio/widget-link)
+[![Total Downloads](https://poser.pugx.org/maileryio/widget-link/downloads)](https://packagist.org/packages/maileryio/widget-link)
+[![Build Status](https://travis-ci.com/maileryio/widget-link.svg?branch=master)](https://travis-ci.com/maileryio/widget-link)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/widget-link/)
+[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/widget-link.svg)](https://scrutinizer-ci.com/g/maileryio/widget-link/)
 
-Yii Widget Link
+Link Widget for Mailery Platform
 
 ## Installation
 
@@ -17,13 +17,13 @@ The preferred way to install this library is through [composer](http://getcompos
 Either run
 
 ```sh
-php composer.phar require "maileryio/yii-widget-link"
+php composer.phar require "maileryio/widget-link"
 ```
 
 or add
 
 ```json
-"maileryio/yii-widget-link": "*"
+"maileryio/widget-link": "*"
 ```
 
 to the require section of your composer.json.

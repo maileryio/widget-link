@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 /**
  * Yii Widget Link
- * @link      https://github.com/maileryio/yii-widget-link
- * @package   yii-widget-link
+ * @link      https://github.com/maileryio/widget-link
+ * @package   widget-link
  * @license   BSD-3-Clause
  * @copyright Copyright (c) 2020, Mailery (https://mailery.io/)
  */
@@ -30,7 +30,7 @@ class VueAssetBundle extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public ?string $sourcePath = '@npm/@maileryio/vue-widget-link/dist';
+    public ?string $sourcePath = '@npm/@maileryio/widget-link/dist';
 
     /**
      * {@inheritdoc}

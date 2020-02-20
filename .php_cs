@@ -3,8 +3,8 @@
 $date = date('Y');
 $header = <<<EOF
 Yii Widget Link
-@link      https://github.com/maileryio/yii-widget-link
-@package   yii-widget-link
+@link      https://github.com/maileryio/widget-link
+@package   widget-link
 @license   BSD-3-Clause
 @copyright Copyright (c) {$date}, Mailery (https://mailery.io/)
 EOF;
