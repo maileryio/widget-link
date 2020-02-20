@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Mailery\Widget\Link;
 
 use Yiisoft\Assets\AssetBundle;
-use Mailery\Backend\Assets\AppAssetBundle;
+use Mailery\Assets\AppAssetBundle;
 
 class VueAssetBundle extends AssetBundle
 {
