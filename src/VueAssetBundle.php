@@ -55,9 +55,3 @@ class VueAssetBundle extends AssetBundle
         AppAssetBundle::class,
     ];
 }
-
-
-
-
-//1. Убрать модель mailery-backend, все слова "backend" выпилить, вся система и есть бекенд
-//3. Что то придумать с бандлами ассетов
