@@ -1,6 +1,6 @@
 {
     "license": "BSD-3-Clause",
     "dependencies": {
-        "@maileryio/widget-link": "1.0.*"
+        "@maileryio/widget-link-assets": "git+ssh://git@github.com:maileryio/widget-link-assets.git#master"
     }
 }
