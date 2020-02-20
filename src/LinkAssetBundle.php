@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Yii Widget Link
+ * Link Widget for Mailery Platform
  * @link      https://github.com/maileryio/widget-link
  * @package   widget-link
  * @license   BSD-3-Clause
@@ -12,10 +12,10 @@ declare(strict_types=1);
 
 namespace Mailery\Widget\Link;
 
-use Yiisoft\Assets\AssetBundle;
 use Mailery\Assets\AppAssetBundle;
+use Yiisoft\Assets\AssetBundle;
 
-class VueAssetBundle extends AssetBundle
+class LinkAssetBundle extends AssetBundle
 {
     /**
      * {@inheritdoc}
@@ -30,22 +30,13 @@ class VueAssetBundle extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public ?string $sourcePath = '@npm/@maileryio/widget-link/dist';
+    public ?string $sourcePath = '@npm/@maileryio/widget-link-assets/dist';
 
     /**
      * {@inheritdoc}
      */
     public array $js = [
         'main.umd.js',
-    ];
-
-    /**
-     * {@inheritdoc}
-     */
-    public array $publishOptions = [
-        'only' => [
-            'main.umd.js',
-        ],
     ];
 
     /**

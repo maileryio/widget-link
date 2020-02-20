@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Yii Widget Link
+ * Link Widget for Mailery Platform
  * @link      https://github.com/maileryio/widget-link
  * @package   widget-link
  * @license   BSD-3-Clause
@@ -116,9 +116,7 @@ class Link extends Widget
      */
     protected function run(): string
     {
-        $this->assetManager->register([
-            VueAssetBundle::class,
-        ]);
+        $this->registerAssets();
 
         $options = array_filter(array_merge(
             $this->options,
@@ -130,5 +128,15 @@ class Link extends Widget
         ));
 
         return Html::tag('vue-widget-link', $this->label, $options);
+    }
+
+    /**
+     * @return void
+     */
+    private function registerAssets()
+    {
+        $this->assetManager->register([
+            LinkAssetBundle::class,
+        ]);
     }
 }

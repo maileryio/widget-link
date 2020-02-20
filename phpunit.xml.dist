@@ -11,7 +11,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Mailery Widget Link tests">
+        <testsuite name="Mailery Link Widget tests">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
