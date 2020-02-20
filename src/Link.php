@@ -127,7 +127,7 @@ class Link extends Widget
             ]
         ));
 
-        return Html::tag('vue-widget-link', $this->label, $options);
+        return Html::tag('ui-widget-link', $this->label, $options);
     }
 
     /**

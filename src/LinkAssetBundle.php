@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace Mailery\Widget\Link;
 
-use Mailery\Assets\AppAssetBundle;
 use Yiisoft\Assets\AssetBundle;
+use Mailery\Web\Assets\VueAssetBundle;
 
 class LinkAssetBundle extends AssetBundle
 {
@@ -36,13 +36,13 @@ class LinkAssetBundle extends AssetBundle
      * {@inheritdoc}
      */
     public array $js = [
-        'main.umd.js',
+        'main.umd.min.js',
     ];
 
     /**
      * {@inheritdoc}
      */
     public array $depends = [
-        AppAssetBundle::class,
+        VueAssetBundle::class,
     ];
 }
