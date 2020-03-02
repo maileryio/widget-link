@@ -20,12 +20,12 @@ class LinkAssetBundle extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public ?string $basePath = '@public/assets';
+    public ?string $basePath = '@public/assets/@maileryio/widget-link-assets';
 
     /**
      * {@inheritdoc}
      */
-    public ?string $baseUrl = '@web';
+    public ?string $baseUrl = '@web/@maileryio/widget-link-assets';
 
     /**
      * {@inheritdoc}
