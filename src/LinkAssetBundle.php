@@ -5,15 +5,15 @@ declare(strict_types=1);
 /**
  * Link Widget for Mailery Platform
  * @link      https://github.com/maileryio/widget-link
- * @package   widget-link
+ * @package   Mailery\Widget\Link
  * @license   BSD-3-Clause
  * @copyright Copyright (c) 2020, Mailery (https://mailery.io/)
  */
 
 namespace Mailery\Widget\Link;
 
-use Yiisoft\Assets\AssetBundle;
 use Mailery\Web\Assets\VueAssetBundle;
+use Yiisoft\Assets\AssetBundle;
 
 class LinkAssetBundle extends AssetBundle
 {
