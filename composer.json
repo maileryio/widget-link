@@ -27,8 +27,7 @@
         "phpunit/phpunit": "^9.0",
         "phan/phan": "^2.4",
         "friendsofphp/php-cs-fixer": "^2.16",
-        "yiisoft/composer-config-plugin": "dev-master",
-        "maileryio/mailery-web": "dev-master"
+        "yiisoft/composer-config-plugin": "dev-master"
     },
     "autoload": {
         "psr-4": {
