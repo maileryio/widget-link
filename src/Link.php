@@ -118,14 +118,14 @@ class Link extends Widget
     {
         $this->registerAssets();
 
-        $options = array_filter(array_merge(
+        $options = array_merge(
             $this->options,
-            [
+            array_filter([
                 'href' => $this->href,
                 'method' => $this->method,
                 'confirm' => $this->confirm,
-            ]
-        ));
+            ])
+        );
 
         return Html::tag('ui-widget-link', $this->label, $options);
     }
