@@ -29,6 +29,11 @@ class Link extends Widget
     private string $href;
 
     /**
+     * @var bool
+     */
+    private bool $encode = true;
+
+    /**
      * @var string
      */
     private string $method = 'get';
@@ -54,6 +59,17 @@ class Link extends Widget
     public function __construct(AssetManager $assetManager)
     {
         $this->assetManager = $assetManager;
+    }
+
+    /**
+     * @param bool $encode
+     * @return self
+     */
+    public function encode(bool $encode): self
+    {
+        $this->encode = $encode;
+
+        return $this;
     }
 
     /**
@@ -127,7 +143,8 @@ class Link extends Widget
             ])
         );
 
-        return Html::tag('ui-widget-link', $this->label, $options);
+        return (string) Html::tag('ui-widget-link', $this->label, $options)
+            ->encode($this->encode);
     }
 
     /**
