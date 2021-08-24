@@ -19,8 +19,8 @@
     "require": {
         "php": "^7.4",
         "foxy/foxy": "^1.0",
-        "yiisoft/assets": "^1.0@dev",
-        "yiisoft/html": "^1.0",
+        "yiisoft/assets": "^1.0",
+        "yiisoft/html": "^2.0",
         "yiisoft/widget": "^3.0@dev"
     },
     "require-dev": {
