@@ -132,7 +132,7 @@ class Link extends Widget
      */
     protected function run(): string
     {
-        $this->registerAssets();
+        $this->assetManager->register(LinkAssetBundle::class);
 
         $options = array_merge(
             $this->options,
@@ -147,13 +147,4 @@ class Link extends Widget
             ->encode($this->encode);
     }
 
-    /**
-     * @return void
-     */
-    private function registerAssets()
-    {
-        $this->assetManager->register([
-            LinkAssetBundle::class,
-        ]);
-    }
 }
