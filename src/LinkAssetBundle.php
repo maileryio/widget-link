@@ -25,7 +25,7 @@ class LinkAssetBundle extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public ?string $baseUrl = '@web/@maileryio/widget-link-assets';
+    public ?string $baseUrl = '@assetsUrl/@maileryio/widget-link-assets';
 
     /**
      * {@inheritdoc}
