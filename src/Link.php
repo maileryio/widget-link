@@ -15,6 +15,7 @@ namespace Mailery\Widget\Link;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Html\Html;
 use Yiisoft\Widget\Widget;
+use Yiisoft\Yii\View\Csrf;
 
 class Link extends Widget
 {
@@ -27,6 +28,11 @@ class Link extends Widget
      * @var string
      */
     private string $href;
+
+    /**
+     * @var Csrf|null
+     */
+    private ?Csrf $csrf = null;
 
     /**
      * @var bool
@@ -49,17 +55,11 @@ class Link extends Widget
     private array $options = [];
 
     /**
-     * @var AssetManager
-     */
-    private AssetManager $assetManager;
-
-    /**
      * @param AssetManager $assetManager
      */
-    public function __construct(AssetManager $assetManager)
-    {
-        $this->assetManager = $assetManager;
-    }
+    public function __construct(
+        private AssetManager $assetManager
+    ) {}
 
     /**
      * @param bool $encode
@@ -67,9 +67,10 @@ class Link extends Widget
      */
     public function encode(bool $encode): self
     {
-        $this->encode = $encode;
+        $new = clone $this;
+        $new->encode = $encode;
 
-        return $this;
+        return $new;
     }
 
     /**
@@ -78,9 +79,10 @@ class Link extends Widget
      */
     public function label(string $label): self
     {
-        $this->label = $label;
+        $new = clone $this;
+        $new->label = $label;
 
-        return $this;
+        return $new;
     }
 
     /**
@@ -89,9 +91,22 @@ class Link extends Widget
      */
     public function href(string $href): self
     {
-        $this->href = $href;
+        $new = clone $this;
+        $new->href = $href;
 
-        return $this;
+        return $new;
+    }
+
+    /**
+     * @param Csrf $csrf
+     * @return self
+     */
+    public function csrf(Csrf $csrf): self
+    {
+        $new = clone $this;
+        $new->csrf = $csrf;
+
+        return $new;
     }
 
     /**
@@ -100,9 +115,10 @@ class Link extends Widget
      */
     public function method(string $method): self
     {
-        $this->method = $method;
+        $new = clone $this;
+        $new->method = $method;
 
-        return $this;
+        return $new;
     }
 
     /**
@@ -111,9 +127,10 @@ class Link extends Widget
      */
     public function confirm(string $confirm): self
     {
-        $this->confirm = $confirm;
+        $new = clone $this;
+        $new->confirm = $confirm;
 
-        return $this;
+        return $new;
     }
 
     /**
@@ -122,9 +139,10 @@ class Link extends Widget
      */
     public function options(array $options): self
     {
-        $this->options = $options;
+        $new = clone $this;
+        $new->options = $options;
 
-        return $this;
+        return $new;
     }
 
     /**
@@ -140,6 +158,8 @@ class Link extends Widget
                 'href' => $this->href,
                 'method' => $this->method,
                 'confirm' => $this->confirm,
+                'csrf-value' => $this->csrf?->getToken(),
+                'csrf-header-name' => $this->csrf?->getHeaderName(),
             ])
         );
 
