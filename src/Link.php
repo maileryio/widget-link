@@ -19,20 +19,11 @@ use Yiisoft\Yii\View\Csrf;
 
 class Link extends Widget
 {
+
     /**
      * @var string
      */
     private string $label;
-
-    /**
-     * @var string
-     */
-    private string $href;
-
-    /**
-     * @var Csrf|null
-     */
-    private ?Csrf $csrf = null;
 
     /**
      * @var bool
@@ -40,19 +31,21 @@ class Link extends Widget
     private bool $encode = true;
 
     /**
-     * @var string
+     * @var array
      */
-    private string $method = 'get';
-
-    /**
-     * @var string|null
-     */
-    private ?string $confirm = null;
+    private array $attributes = [];
 
     /**
      * @var array
      */
     private array $options = [];
+
+    /**
+     * @var array
+     */
+    private array $headers = [
+        'Content-Type' => 'application/json; charset=utf-8',
+    ];
 
     /**
      * @param AssetManager $assetManager
@@ -92,7 +85,7 @@ class Link extends Widget
     public function href(string $href): self
     {
         $new = clone $this;
-        $new->href = $href;
+        $new->attributes['href'] = $href;
 
         return $new;
     }
@@ -104,7 +97,7 @@ class Link extends Widget
     public function csrf(Csrf $csrf): self
     {
         $new = clone $this;
-        $new->csrf = $csrf;
+        $new->headers[$csrf->getHeaderName()] = $csrf->getToken();
 
         return $new;
     }
@@ -116,7 +109,7 @@ class Link extends Widget
     public function method(string $method): self
     {
         $new = clone $this;
-        $new->method = $method;
+        $new->attributes['method'] = $method;
 
         return $new;
     }
@@ -128,7 +121,67 @@ class Link extends Widget
     public function confirm(string $confirm): self
     {
         $new = clone $this;
-        $new->confirm = $confirm;
+        $new->attributes['confirm'] = $confirm;
+
+        return $new;
+    }
+
+    /**
+     * @param string|bool $disabled
+     * @return self
+     */
+    public function disabled(string|bool $disabled): self
+    {
+        $new = clone $this;
+        $new->attributes[':disabled'] = $disabled;
+
+        return $new;
+    }
+
+    /**
+     * @param string $createRequest
+     * @return self
+     */
+    public function createRequest(string $createRequest): self
+    {
+        $new = clone $this;
+        $new->attributes[':create-request'] = $createRequest;
+
+        return $new;
+    }
+
+    /**
+     * @param string $afterRequest
+     * @return self
+     */
+    public function afterRequest(string $afterRequest): self
+    {
+        $new = clone $this;
+        $new->attributes[':after-request'] = $afterRequest;
+
+        return $new;
+    }
+
+    /**
+     * @param string $beforeRequest
+     * @return self
+     */
+    public function beforeRequest(string $beforeRequest): self
+    {
+        $new = clone $this;
+        $new->attributes[':before-request'] = $beforeRequest;
+
+        return $new;
+    }
+
+    /**
+     * @param array $attributes
+     * @return self
+     */
+    public function attributes(array $attributes): self
+    {
+        $new = clone $this;
+        $new->attributes = $attributes;
 
         return $new;
     }
@@ -146,25 +199,37 @@ class Link extends Widget
     }
 
     /**
+     * @param array $headers
+     * @return self
+     */
+    public function headers(array $headers): self
+    {
+        $new = clone $this;
+        $new->headers = $headers;
+
+        return $new;
+    }
+
+    /**
      * {@inheritdoc}
      */
     protected function run(): string
     {
         $this->assetManager->register(LinkAssetBundle::class);
 
-        $options = array_merge(
-            $this->options,
-            array_filter([
-                'href' => $this->href,
-                'method' => $this->method,
-                'confirm' => $this->confirm,
-                'csrf-value' => $this->csrf?->getToken(),
-                'csrf-header-name' => $this->csrf?->getHeaderName(),
-            ])
-        );
-
-        return (string) Html::tag('ui-widget-link', $this->label, $options)
-            ->encode($this->encode);
+        return Html::tag(
+                'ui-link',
+                $this->label,
+                array_merge(
+                    $this->options,
+                    $this->attributes,
+                    [
+                        ':headers' => $this->headers,
+                    ]
+                )
+            )
+            ->encode($this->encode)
+            ->render();
     }
 
 }
